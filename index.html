@@ -7,11 +7,11 @@
     
     <title>CTC Ingeniería | Consultoría Técnica y Construcción en Colombia</title>
     <meta name="description" content="Expertos en ingeniería estructural, geotecnia, geomática y construcción. Soluciones integrales bajo normativa NSR-10 en Colombia.">
-    <meta name="keywords" content="Ingeniería Civil, Diseño Estructural, Geotecnia, Topografía, Construcción, NSR-10, Colombia">
+    <meta name="keywords" content="Ingeniería Civil, Diseño Estructural, Geotecnia, Topografía, Construcción, NSR-10, Colombia, Libros de Ingeniería">
     <meta name="author" content="CTC Ingeniería">
 
     <meta property="og:title" content="CTC Ingeniería | Consultoría y Construcción">
-    <meta property="og:description" content="Servicios profesionales de ingeniería civil y consultoría técnica en Colombia.">
+    <meta property="og:description" content="Servicios profesionales de ingeniería civil y publicaciones técnicas especializadas.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ctcing.github.io/ctcingenieria/">
 
@@ -57,7 +57,7 @@
         nav a{
             color:white;
             text-decoration:none;
-            margin:0 20px;
+            margin:0 15px;
             font-weight:bold;
         }
 
@@ -117,6 +117,53 @@
             color:#0b2c4a;
         }
 
+        /* Estilos Nueva Sección Libros */
+        .libros-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 30px;
+        }
+
+        .libro-card {
+            background: white;
+            display: flex;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .libro-img {
+            width: 150px;
+            background: #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #666;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .libro-info {
+            padding: 20px;
+            flex: 1;
+        }
+
+        .btn-descargar {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 8px 15px;
+            background: #0b2c4a;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .btn-descargar:hover {
+            background: #163e63;
+        }
+
         .proyectos{
             display:grid;
             grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
@@ -158,14 +205,15 @@
             margin-top:40px;
         }
 
-        /* Enlaces de contacto */
         .contacto a {
             color: #163e63;
             text-decoration: none;
         }
         
-        .contacto a:hover {
-            text-decoration: underline;
+        @media (max-width: 600px) {
+            .libro-card { flex-direction: column; }
+            .libro-img { width: 100%; height: 200px; }
+            .libros-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -180,6 +228,7 @@
 <nav>
     <a href="#empresa">Empresa</a>
     <a href="#servicios">Servicios</a>
+    <a href="#libros">Libros</a>
     <a href="#proyectos">Proyectos</a>
     <a href="#contacto">Contacto</a>
 </nav>
@@ -193,8 +242,7 @@
     <p style="text-align:center; max-width:800px; margin:auto; font-size:18px">
         CTC Ingeniería es una empresa dedicada a la consultoría técnica, 
         desarrollo de proyectos y construcción de infraestructura. 
-        Brindamos soluciones integrales en ingeniería estructural, 
-        geotecnia, geomática, estudios técnicos y ejecución de obras civiles bajo normativa NSR-10.
+        Brindamos soluciones integrales bajo normativa NSR-10 en Colombia.
     </p>
 </section>
 
@@ -202,29 +250,46 @@
     <h2>Servicios Especializados</h2>
     <div class="grid">
         <div class="card">
-            <h3>Consultoría Técnica</h3>
-            <p>Estudios especializados, interventoría y asesoría técnica en proyectos de ingeniería civil.</p>
-        </div>
-        <div class="card">
             <h3>Ingeniería Estructural</h3>
-            <p>Diseño y cálculo estructural de edificaciones e infraestructura siguiendo la norma NSR-10.</p>
+            <p>Diseño y cálculo bajo normativa NSR-10 para edificaciones seguras.</p>
         </div>
         <div class="card">
             <h3>Geotecnia</h3>
-            <p>Estudios de suelo, mecánica de suelos y análisis de estabilidad para cimentaciones seguras.</p>
+            <p>Estudios de suelo y análisis de estabilidad para cimentaciones.</p>
         </div>
         <div class="card">
             <h3>Geomática</h3>
-            <p>Levantamientos topográficos, fotogrametría y gestión de información geoespacial precisa.</p>
+            <p>Levantamientos topográficos y gestión de información geoespacial.</p>
         </div>
-        <div class="card">
-            <h3>Desarrollo de Proyectos</h3>
-            <p>Planificación, formulación técnica y estructuración completa de proyectos de inversión.</p>
+    </div>
+</section>
+
+<section id="libros" style="background: #ebeff2;">
+    <h2>Publicaciones y Libros Técnicos</h2>
+    <div class="libros-grid">
+        
+        <div class="libro-card">
+            <div class="libro-img" style="background: #0b2c4a; color: white;">
+                PORTADA LIBRO 1
+            </div>
+            <div class="libro-info">
+                <h3>Manual de Diseño Estructural</h3>
+                <p>Una guía práctica para la aplicación de la norma NSR-10 en proyectos residenciales.</p>
+                <a href="#" class="btn-descargar">Más información</a>
+            </div>
         </div>
-        <div class="card">
-            <h3>Construcción</h3>
-            <p>Ejecución profesional de obras civiles, infraestructura vial y proyectos de edificación.</p>
+
+        <div class="libro-card">
+            <div class="libro-img" style="background: #163e63; color: white;">
+                PORTADA LIBRO 2
+            </div>
+            <div class="libro-info">
+                <h3>Fundamentos de Geotecnia</h3>
+                <p>Análisis de estabilidad de taludes y comportamiento de suelos en la región andina.</p>
+                <a href="#" class="btn-descargar">Más información</a>
+            </div>
         </div>
+
     </div>
 </section>
 
@@ -233,15 +298,11 @@
     <div class="proyectos">
         <div class="proyecto">
             <h3>Infraestructura</h3>
-            <p>Desarrollo y ejecución técnica de proyectos de infraestructura de alto impacto.</p>
+            <p>Desarrollo y ejecución técnica de proyectos de infraestructura vial.</p>
         </div>
         <div class="proyecto">
-            <h3>Diseño Estructural</h3>
-            <p>Modelado y cálculo detallado para edificaciones residenciales e industriales.</p>
-        </div>
-        <div class="proyecto">
-            <h3>Estudios Geotécnicos</h3>
-            <p>Investigación detallada del subsuelo para la toma de decisiones constructivas.</p>
+            <h3>Modelado BIM</h3>
+            <p>Diseño y coordinación de proyectos bajo metodología BIM.</p>
         </div>
     </div>
 </section>
